@@ -1,19 +1,21 @@
 {%set name = "eventlet" %}
-{%set version = "0.19.0" %}
+{%set version = "0.20.1" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "306373b8adda84b7d471f5829c59ca33f9438c8ecd34daf5cddde19d376caf21" %}
+{%set hash_val = "3ad581b8645a54acf436e62a4d8cbf229a1ec7bfa3287c160f0258826b297838" %}
+{%set build_num = "0" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -40,8 +42,11 @@ test:
 about:
   home: http://eventlet.net
   license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: 'Highly concurrent networking library'
+  dev_url: https://github.com/eventlet/eventlet
+  doc_url: http://eventlet.net
 
 extra:
   recipe-maintainers:
