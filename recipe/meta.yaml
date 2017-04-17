@@ -1,8 +1,8 @@
 {%set name = "eventlet" %}
-{%set version = "0.20.1" %}
+{%set version = "0.21.0" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "3ad581b8645a54acf436e62a4d8cbf229a1ec7bfa3287c160f0258826b297838" %}
+{%set hash_val = "08faffab88c1b08bd53ea28bf084a572c89f7e7648bd9d71e6116ac17a51a15d" %}
 {%set build_num = "0" %}
 
 package:
