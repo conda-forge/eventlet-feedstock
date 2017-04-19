@@ -27,6 +27,7 @@ requirements:
     - python
     - greenlet >=0.3
     - enum34  # [py2k]
+    - pyopenssl
 
 test:
   imports:
