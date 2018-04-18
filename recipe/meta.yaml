@@ -1,8 +1,8 @@
 {% set name = "eventlet" %}
-{% set version = "0.22.0" %}
+{% set version = "0.22.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "6d22464f448fdf144a9d566c157299d686bbe324554dd7729df9ccd05ca66439" %}
+{% set hash = "46b7e565aaa06b5d1ba435cb355e09cf3002e34dc269671c93c960f9879d30e0" %}
 {% set build = 0 %}
 
 package:
@@ -15,7 +15,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
   noarch: python
 
