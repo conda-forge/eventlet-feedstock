@@ -14,12 +14,16 @@ Summary: Highly concurrent networking library
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/eventlet-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/eventlet-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/eventlet-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/eventlet-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/eventlet-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/eventlet-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/eventlet-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/eventlet-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/eventlet/badges/version.svg)](https://anaconda.org/conda-forge/eventlet)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/eventlet/badges/downloads.svg)](https://anaconda.org/conda-forge/eventlet)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-eventlet-green.svg)](https://anaconda.org/conda-forge/eventlet) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/eventlet.svg)](https://anaconda.org/conda-forge/eventlet) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/eventlet.svg)](https://anaconda.org/conda-forge/eventlet) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/eventlet.svg)](https://anaconda.org/conda-forge/eventlet) |
 
 Installing eventlet
 ===================
