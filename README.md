@@ -14,8 +14,9 @@ Summary: Highly concurrent networking library
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/eventlet-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/eventlet-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/eventlet-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/eventlet-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/eventlet-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/eventlet-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/eventlet-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/eventlet-feedstock/branch/master)
 
 Current release info
 ====================
