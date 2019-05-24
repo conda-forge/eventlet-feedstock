@@ -1,8 +1,8 @@
 {% set name = "eventlet" %}
-{% set version = "0.23.0" %}
+{% set version = "0.25.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "554a50dad7abee0a9775b0780ce9d9c0bd9123dda4743c46d4314170267c6c47" %}
+{% set hash = "f0610bd0d3bb3d51d69f74caa4ad04fc7bce424cdb72e54d08ccda90d8c69800" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
