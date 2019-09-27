@@ -1,8 +1,8 @@
 {% set name = "eventlet" %}
-{% set version = "0.23.0" %}
+{% set version = "0.25.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "554a50dad7abee0a9775b0780ce9d9c0bd9123dda4743c46d4314170267c6c47" %}
+{% set hash = "6c9c625af48424c4680d89314dbe45a76cc990cf002489f9469ff214b044ffc1" %}
 
 package:
   name: {{ name|lower }}
@@ -14,8 +14,8 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1000
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
@@ -26,6 +26,9 @@ requirements:
     - python
     - greenlet >=0.3
     - enum34  # [py<34]
+    - dnspython >=1.15.0
+    - monotonic >=1.4
+    - six >=1.10.0
     - pyopenssl
 
 test:
@@ -50,5 +53,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - synapticarbors
     - anguslees
     - pmlandwehr
