@@ -1,7 +1,6 @@
 {% set name = "eventlet" %}
 {% set version = "0.25.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash = "6c9c625af48424c4680d89314dbe45a76cc990cf002489f9469ff214b044ffc1" %}
 
 package:
@@ -11,10 +10,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
