@@ -1,7 +1,7 @@
 {% set name = "eventlet" %}
-{% set version = "0.25.1" %}
+{% set version = "0.25.2" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "6c9c625af48424c4680d89314dbe45a76cc990cf002489f9469ff214b044ffc1" %}
+{% set hash = "4c8ab42c51bff55204fef43cff32616558bedbc7538d876bb6a96ce820c7f9ed" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -46,7 +46,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Highly concurrent networking library'
+  summary: Highly concurrent networking library
   dev_url: https://github.com/eventlet/eventlet
   doc_url: http://eventlet.net
 
