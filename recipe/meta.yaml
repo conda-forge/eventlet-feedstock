@@ -17,10 +17,9 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
-
   run:
     - python
     - greenlet >=0.3
