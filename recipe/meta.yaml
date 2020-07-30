@@ -1,7 +1,7 @@
 {% set name = "eventlet" %}
-{% set version = "0.25.2" %}
+{% set version = "0.26.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "4c8ab42c51bff55204fef43cff32616558bedbc7538d876bb6a96ce820c7f9ed" %}
+{% set hash = "df84b99b01a2c23a3d13661b6576da6ffa38f5aceba9dbbbaf30c049864ee4ca" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +17,9 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
-
   run:
     - python
     - greenlet >=0.3
