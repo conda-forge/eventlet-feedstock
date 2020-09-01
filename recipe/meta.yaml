@@ -24,7 +24,7 @@ requirements:
     - python
     - greenlet >=0.3
     - enum34  # [py<34]
-    - dnspython >=1.15.0
+    - dnspython >=1.15.0,<2.0.0
     - monotonic >=1.4
     - six >=1.10.0
     - pyopenssl
