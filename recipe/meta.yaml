@@ -14,16 +14,16 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - greenlet >=0.3
-    - enum34  # [py<34]
     - dnspython >=1.15.0,<2.0.0
     - monotonic >=1.4
     - six >=1.10.0
@@ -34,7 +34,7 @@ test:
     - eventlet
     - eventlet.green
     - eventlet.green.OpenSSL
-    - eventlet.green.http  # [py3k]
+    - eventlet.green.http
     - eventlet.green.urllib
     - eventlet.greenio
     - eventlet.hubs
