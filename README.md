@@ -5,11 +5,13 @@ Home: http://eventlet.net
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/eventlet-feedstock/blob/master/LICENSE.txt)
 
 Summary: Highly concurrent networking library
 
+Development: https://github.com/eventlet/eventlet
 
+Documentation: http://eventlet.net
 
 Current build status
 ====================
