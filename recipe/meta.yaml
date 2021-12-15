@@ -38,6 +38,10 @@ test:
     - eventlet.greenio
     - eventlet.hubs
     - eventlet.support
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://eventlet.net
@@ -52,4 +56,3 @@ extra:
   recipe-maintainers:
     - synapticarbors
     - anguslees
-    - pmlandwehr
