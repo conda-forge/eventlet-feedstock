@@ -28,6 +28,7 @@ requirements:
     - greenlet >=1.0
     - dnspython >=1.15.0
     - six >=1.10.0
+    - pyopenssl
 
 test:
   imports:
