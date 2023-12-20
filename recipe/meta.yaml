@@ -1,7 +1,7 @@
 {% set name = "eventlet" %}
-{% set version = "0.33.3" %}
+{% set version = "0.34.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "722803e7eadff295347539da363d68ae155b8b26ae6a634474d0a920be73cfda" %}
+{% set hash = "0087763f3ae18a571a5cc60fdd06ceb02fdb9f006693e9ee1e8e8044ae3b470b" %}
 
 package:
   name: {{ name|lower }}
@@ -19,11 +19,13 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
+    - hatch-vcs >=0.3
+    - hatchling >=1.12.2
   run:
-    - python >=3.5
-    - greenlet >=0.3
+    - python >=3.7
+    - greenlet >=1.0
     - dnspython >=1.15.0
     - six >=1.10.0
     - pyopenssl
