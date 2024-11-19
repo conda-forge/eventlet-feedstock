@@ -1,0 +1,59 @@
+context:
+  version: 0.38.0
+  python_min: "3.7"
+
+package:
+  name: eventlet
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/e/eventlet/eventlet-${{ version }}.tar.gz
+  sha256: a5df970a2431526e4973bd5810bb8c41aa4da18baa531aa18799302c24e19510
+
+build:
+  number: 0
+  noarch: python
+  script: python -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}
+    - pip
+    - hatch-vcs >=0.3
+    - hatchling >=1.12.2
+  run:
+    - python >=${{ python_min }}
+    - greenlet >=1.0
+    - dnspython >=1.15.0
+    - pyopenssl
+
+tests:
+  - python:
+      imports:
+        - eventlet
+        - eventlet.green
+        - eventlet.green.OpenSSL
+        - eventlet.green.http
+        - eventlet.green.urllib
+        - eventlet.greenio
+        - eventlet.hubs
+        - eventlet.support
+      pip_check: true
+  - script:
+      - python -c "import eventlet"
+    requirements:
+      run:
+        - python ${{ python_min }}
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: Highly concurrent networking library
+  homepage: http://eventlet.net
+  repository: https://github.com/eventlet/eventlet
+  documentation: http://eventlet.net
+
+extra:
+  recipe-maintainers:
+    - synapticarbors
+    - anguslees
