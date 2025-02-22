@@ -148,5 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@anguslees](https://github.com/anguslees/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@synapticarbors](https://github.com/synapticarbors/)
 
