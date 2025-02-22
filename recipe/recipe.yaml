@@ -1,5 +1,5 @@
 context:
-  version: 0.38.0
+  version: 0.39.0
   python_min: "3.7"
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/eventlet/eventlet-${{ version }}.tar.gz
-  sha256: a5df970a2431526e4973bd5810bb8c41aa4da18baa531aa18799302c24e19510
+  sha256: 01ba0aa6ee2452690fc02b274a2409598a13b997c7b5af9dc66600fa42015a79
 
 build:
   number: 0
@@ -57,3 +57,4 @@ extra:
   recipe-maintainers:
     - synapticarbors
     - anguslees
+    - jan-janssen
