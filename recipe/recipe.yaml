@@ -1,6 +1,6 @@
 context:
   version: 0.39.0
-  python_min: "3.7.*"
+  python_min: "3.7"
 
 package:
   name: eventlet
@@ -17,7 +17,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - hatch-vcs >=0.3
     - hatchling >=1.12.2
@@ -43,7 +43,7 @@ tests:
       - python -c "import eventlet"
     requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
 
 about:
   license: MIT
