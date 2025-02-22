@@ -1,5 +1,6 @@
 context:
   version: 0.39.0
+  python_min: "3.7.*"
 
 package:
   name: eventlet
