@@ -13,11 +13,11 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script: python -m pip install . -vv --no-build-isolation --no-deps
 
 requirements:
   host:
-    - python =${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - hatch-vcs >=0.3
     - hatchling >=1.12.2
@@ -39,11 +39,7 @@ tests:
         - eventlet.hubs
         - eventlet.support
       pip_check: true
-  - script:
-      - python -c "import eventlet"
-    requirements:
-      run:
-        - python =${{ python_min }}
+      python_version: ${{ python_min }}.*
 
 about:
   license: MIT
