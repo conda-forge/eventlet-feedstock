@@ -1,5 +1,5 @@
 context:
-  version: "0.40.1"
+  version: "0.40.2"
 
 package:
   name: eventlet
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/eventlet/eventlet-${{ version }}.tar.gz
-  sha256: aee74de74ac6634a1dac1ed58dc93b5dc2abaef3c7b5e76fd7f195f1662f25ef
+  sha256: 42636c277f761d026905cd0ba0a11edec7600001be401d6ae7e9546559c8d8b0
 
 build:
   number: 0
