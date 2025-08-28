@@ -1,5 +1,5 @@
 context:
-  version: "0.40.2"
+  version: 0.40.3
 
 package:
   name: eventlet
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/eventlet/eventlet-${{ version }}.tar.gz
-  sha256: 42636c277f761d026905cd0ba0a11edec7600001be401d6ae7e9546559c8d8b0
+  sha256: 290852db0065d78cec17a821b78c8a51cafb820a792796a354592ae4d5fceeb0
 
 build:
   number: 0
@@ -24,14 +24,13 @@ requirements:
     - python >=${{ python_min }}
     - greenlet >=1.0
     - dnspython >=1.15.0
-    - pyopenssl
-
 tests:
   - python:
       imports:
         - eventlet
         - eventlet.green
-        - eventlet.green.OpenSSL
+        # moved to separate test since it needs pyopenssl
+        # - eventlet.green.OpenSSL
         - eventlet.green.http
         - eventlet.green.urllib
         - eventlet.greenio
@@ -39,6 +38,12 @@ tests:
         - eventlet.support
       pip_check: true
       python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pyopenssl
+        - python ${{ python_min }}.*
+    script:
+      - python -c "import eventlet.green.OpenSSL"
 
 about:
   license: MIT
