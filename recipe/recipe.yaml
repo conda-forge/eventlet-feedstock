@@ -37,6 +37,9 @@ tests:
         - eventlet.support
       pip_check: true
       python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pyopenssl
 
 about:
   license: MIT
