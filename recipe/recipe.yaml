@@ -29,7 +29,8 @@ tests:
       imports:
         - eventlet
         - eventlet.green
-        - eventlet.green.OpenSSL
+        # moved to separate test since it needs pyopenssl
+        # - eventlet.green.OpenSSL
         - eventlet.green.http
         - eventlet.green.urllib
         - eventlet.greenio
@@ -40,6 +41,9 @@ tests:
   - requirements:
       run:
         - pyopenssl
+        - python ${{ python_min }}.*
+    script:
+      - python -c "import eventlet.green.OpenSSL"
 
 about:
   license: MIT
