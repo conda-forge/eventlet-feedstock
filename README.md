@@ -44,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `eventlet` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install eventlet
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install eventlet
 ```
 
-It is possible to list all of the versions of `eventlet` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add eventlet
+# for installing globally
+pixi global install eventlet
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `eventlet` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search eventlet --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search eventlet --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search eventlet --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -80,6 +122,8 @@ mamba repoquery whoneeds eventlet --channel conda-forge
 # List dependencies of `eventlet`:
 mamba repoquery depends eventlet --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
